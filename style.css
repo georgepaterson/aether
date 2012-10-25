@@ -1,0 +1,81 @@
+/*
+	Theme Name: Aether
+	Theme URI: http://www.georgepaterson.com
+	Description: A simple Wordpress theme using the latest features of HTML5, CSS3 and JavaScript.
+	Version: 0.1
+	Author: George Paterson
+	Author URI: http://www.georgepaterson.com
+	Tags: HTML5, CSS3
+*/
+html {
+	background: rgb(255,255,255);
+	font-family: Helvetica, Arial, sans-serif;
+}
+body {
+	color: rgb(50,50,50);
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	margin: 0 auto;
+	width: 960px;
+	padding: 0 10px;
+	word-spacing: -5px;
+}
+.accessible {
+	height: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+.aside, .header, .main, .footer {
+	display: inline-block;
+	vertical-align: top;
+	word-spacing: 0;
+}
+.header {
+	width: 960px;
+}
+.main {
+	width: 630px;
+	padding: 0 10px 0 0;
+}
+.aside {
+	width: 320px;
+}
+.footer {
+	width: 960px;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 16px 0;
+	text-rendering: optimizelegibility;
+}
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+a {
+	color: rgb(30,120,200);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
