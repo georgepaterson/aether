@@ -23,15 +23,14 @@
 		<?php wp_head(); ?>	
 	</head>
 	<body <?php body_class(); ?>>
-		<div id="content" class="content">
-			<header id="header" class="header" role="banner">
-				<p id="skip-link" class="skip-link accessible"><a href="#main">Skip to content</a></p>
-				<hgroup id="branding" class="branding">
-					<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-					<h2><?php bloginfo('description'); ?></h2>					
-				</hgroup>
-				<nav id="navigation" class="navigation" role="navigation">
-					<?php wp_nav_menu(array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-				</nav>
-				<?php get_search_form(); ?>
-			</header>
+		<header id="header" class="header" role="banner">
+			<p id="skip-link" class="skip-link accessible"><a href="#main">Skip to content</a></p>
+			<hgroup id="branding" class="branding">
+				<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+				<h2><?php bloginfo('description'); ?></h2>					
+			</hgroup>
+			<nav id="navigation" class="navigation" role="navigation">
+				<?php wp_nav_menu(array('container_class' => 'navigation-menu', 'theme_location' => 'primary')); ?>
+			</nav>
+			<?php get_search_form(); ?>
+		</header>
