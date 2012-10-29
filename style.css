@@ -9,20 +9,18 @@
 */
 html {
 	background: rgb(255,255,255);
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
 	color: rgb(50,50,50);
 	font-size: 16px;
 	line-height: 1.5;
-	margin: 0;
-	padding: 0;
-}
-.content {
 	margin: 0 auto;
-	width: 960px;
-	padding: 0 10px;
+	padding: 0;
 	word-spacing: -5px;
+}
+.quicklinks {
+	word-spacing: 0;
 }
 .accessible {
 	height: 0;
@@ -35,20 +33,9 @@ body {
 .aside, .header, .main, .footer {
 	display: inline-block;
 	vertical-align: top;
+}
+.aside, .main {
 	word-spacing: 0;
-}
-.header {
-	width: 960px;
-}
-.main {
-	width: 630px;
-	padding: 0 10px 0 0;
-}
-.aside {
-	width: 320px;
-}
-.footer {
-	width: 960px;
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin: 16px 0;
@@ -78,4 +65,92 @@ a {
 }
 a:hover {
 	text-decoration: underline;
+}
+.heading, .branding, .navigation, .search { 
+	word-spacing: 0;
+}
+.heading {
+	display: block;
+}
+.navigation {
+	display: inline-block;
+}
+.menu {
+	margin: 0;
+	padding: 0;
+	text-align: left;	
+}
+.menu-item {
+	display: inline-block;
+	padding: 0 20px 0 0;
+}
+.search {
+	display: inline-block;
+	width: 320px;
+}
+.copyright, .authentication {
+	word-spacing: 0;
+}
+.copyright {
+	display: inline-block;
+	width: 640px;
+}
+.authentication {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	width: 320px;
+}
+.authentication li {
+	display: inline-block;
+	padding: 0 0 0 20px;
+}
+@media only screen and (min-width: 340px) {
+	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication {
+		width: 320px;
+	}		
+}
+@media only screen and (min-width: 660px) {
+	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication {
+		width: 640px;
+	}	
+}
+@media only screen and (min-width: 980px) {
+	body, .header, .footer {
+		width: 960px;
+	}
+	.main, .copyright, .navigation {
+		width: 640px;
+	}
+	.aside, .search, .authentication {
+		width: 320px;
+	}	
+}
+@media only screen and (min-width: 1300px) {
+	body, .header, .footer {
+		width: 1280px;
+	}
+	.main, .copyright, .navigation {
+		width: 960px;
+	}
+	.aside, .search, .authentication {
+		width: 320px;
+	}	
+}
+@media only screen and (min-width: 1620px) {
+	body, .header, .footer {
+		width: 1600px;
+	}
+	.main, .copyright, .navigation {
+		width: 960px;
+	}
+	.aside, .search, .authentication {
+		width: 640px;
+	}
+	.widget {
+		display: inline-block;
+		width: 320px;
+		vertical-align: top;
+	}	
 }
