@@ -37,6 +37,10 @@ function register_my_menus() {
 		)
 	);
 }
+function show_posts_nav() {
+   global $wp_query;
+   return ($wp_query -> max_num_pages > 1);
+}
 add_action('init', 'register_my_menus');
 ?>
 <?php function aether_comments($comment, $args, $depth) { $GLOBALS['comment'] = $comment; ?>

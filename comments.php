@@ -33,5 +33,24 @@
 			<p class="nocomments"><?php _e( 'Comments are closed.' ); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
-	<?php comment_form(); ?>
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+		<?php if ( is_user_logged_in() ) : ?>
+			<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>.</p> 
+			<p><a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out</a> &raquo;</p>
+		<?php else : ?>
+			<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+			<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" <?php if ($req) echo "required"; ?> />
+			<label for="email">Email <?php if ($req) echo "(required)"; ?></label>
+			<input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" <?php if ($req) echo "required"; ?> />
+			<p class="comment-notes">Your email address will not be published.</p>
+			<label for="url">Website</label>
+			<input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" />
+		<?php endif; ?>
+		<label for="comment">Comment</label>
+		<textarea name="comment" id="comment" required="required"></textarea>
+		<p>You may use these <abbr title="HyperText Markup Language">HTML</abbr>tags and attributes: <code><?php echo allowed_tags(); ?></code></p>
+		<input type="submit" name="submit" id="send" value="Post comment" />
+		<?php comment_id_fields(); ?>
+		<?php do_action('comment_form', $post->ID); ?>
+	</form>
 </div>

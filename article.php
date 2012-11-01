@@ -29,3 +29,9 @@
 <?php endwhile; else: ?>
 	<p><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
 <?php endif; ?>
+<?php if (show_posts_nav()) : ?>
+	<ul class="pagination">
+		<li class="previous"><?php next_posts_link('Older Posts') ?></li>
+		<li class="next"><?php previous_posts_link('Newer Posts') ?></li>
+	</ul>
+<?php endif; ?>

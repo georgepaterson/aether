@@ -17,10 +17,6 @@ body {
 	line-height: 1.5;
 	margin: 0 auto;
 	padding: 0;
-	word-spacing: -5px;
-}
-.quicklinks {
-	word-spacing: 0;
 }
 .accessible {
 	height: 0;
@@ -29,13 +25,6 @@ body {
 	position: absolute;
 	top: 0;
 	width: 0;
-}
-.aside, .header, .main, .footer {
-	display: inline-block;
-	vertical-align: top;
-}
-.aside, .main {
-	word-spacing: 0;
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin: 16px 0;
@@ -66,14 +55,17 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-.heading, .branding, .navigation, .search { 
-	word-spacing: 0;
-}
 .heading {
 	display: block;
 }
+.branding h2 {
+	color: rgb(80,80,80);
+	font-size: 18px;
+}
 .navigation {
-	display: inline-block;
+	border-bottom: 1px solid rgb(150,150,150);
+	border-top: 1px solid rgb(150,150,150);
+	padding: 15px 0;
 }
 .menu {
 	margin: 0;
@@ -85,67 +77,77 @@ a:hover {
 	padding: 0 20px 0 0;
 }
 .search {
-	display: inline-block;
-	width: 320px;
+	display: block;
+	overflow: hidden;
+}
+.search-fieldset {
+	border: none;
+	float: right;
+	margin: 0;
+	padding: 16px 0;
 }
 .copyright, .authentication {
 	word-spacing: 0;
 }
 .copyright {
 	display: inline-block;
-	width: 640px;
 }
 .authentication {
-	display: inline-block;
 	margin: 0;
 	padding: 0;
-	text-align: right;
 	width: 320px;
 }
 .authentication li {
 	display: inline-block;
-	padding: 0 0 0 20px;
+	margin: 16px 0;
+	padding: 0 20px 0 0;
+}
+.main, .aside, .copyright, .authentication {
+	float: left;
 }
 @media only screen and (min-width: 340px) {
-	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication {
+	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication, .search-fieldset {
 		width: 320px;
 	}		
 }
 @media only screen and (min-width: 660px) {
-	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication {
+	body, .header, .main, .aside, .footer, .navigation, .search {
 		width: 640px;
+	}
+	.search-fieldset, .copyright, .authentication {
+		width: 320px;
 	}	
 }
 @media only screen and (min-width: 980px) {
-	body, .header, .footer {
+	body, .header, .navigation, .search, .footer {
 		width: 960px;
 	}
-	.main, .copyright, .navigation {
+	.main, .copyright {
 		width: 640px;
 	}
-	.aside, .search, .authentication {
+	.aside, .authentication, .search-fieldset {
 		width: 320px;
 	}	
 }
 @media only screen and (min-width: 1300px) {
-	body, .header, .footer {
+	body, .header, .navigation, .search, .footer {
 		width: 1280px;
 	}
-	.main, .copyright, .navigation {
+	.main, .copyright {
 		width: 960px;
 	}
-	.aside, .search, .authentication {
+	.aside, .authentication, .search-fieldset {
 		width: 320px;
 	}	
 }
 @media only screen and (min-width: 1620px) {
-	body, .header, .footer {
+	body, .header, .navigation, .search, .footer {
 		width: 1600px;
 	}
-	.main, .copyright, .navigation {
+	.main, .copyright {
 		width: 960px;
 	}
-	.aside, .search, .authentication {
+	.aside, .authentication, .search-fieldset {
 		width: 640px;
 	}
 	.widget {
