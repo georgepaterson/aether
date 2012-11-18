@@ -55,8 +55,28 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 16px;
+    margin: 0;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
 .heading {
 	display: block;
+}
+.branding {
+	padding: 0 5px;
 }
 .branding h2 {
 	color: rgb(80,80,80);
@@ -69,7 +89,7 @@ a:hover {
 }
 .menu {
 	margin: 0;
-	padding: 0;
+	padding: 0 5px;
 	text-align: left;	
 }
 .menu-item {
@@ -81,16 +101,19 @@ a:hover {
 	overflow: hidden;
 }
 .search-fieldset {
-	border: none;
 	float: right;
 	margin: 0;
 	padding: 16px 0;
+}
+.search-label {
+	padding: 0 0 0 5px;
 }
 .copyright, .authentication {
 	word-spacing: 0;
 }
 .copyright {
 	display: inline-block;
+	padding: 0 0 0 5px;
 }
 .authentication {
 	margin: 0;
@@ -100,30 +123,53 @@ a:hover {
 .authentication li {
 	display: inline-block;
 	margin: 16px 0;
-	padding: 0 20px 0 0;
+	padding: 0 15px 0 5px;
+}
+.comment-form label, .comment-form input {
+	display: block;
 }
 .main, .aside, .copyright, .authentication {
 	float: left;
 }
+.page, .post, .comments {
+	padding: 0 5px;
+}
+.page img, .post img, .comments img {
+	max-width: 100%;
+}
+.widget {
+	float: left;
+	padding: 0 5px;
+	width: 310px;
+}
 @media only screen and (min-width: 340px) {
-	body, .header, .main, .aside, .footer, .navigation, .search, .copyright, .authentication, .search-fieldset {
+	body, .header, .main, .aside, .footer, .navigation, .search, .authentication, .search-fieldset {
 		width: 320px;
+	}
+	.copyright {
+		width: 315px;
 	}		
 }
 @media only screen and (min-width: 660px) {
 	body, .header, .main, .aside, .footer, .navigation, .search {
 		width: 640px;
 	}
-	.search-fieldset, .copyright, .authentication {
+	.search-fieldset, .authentication {
 		width: 320px;
+	}
+	.copyright {
+		width: 315px;
 	}	
 }
 @media only screen and (min-width: 980px) {
 	body, .header, .navigation, .search, .footer {
 		width: 960px;
 	}
-	.main, .copyright {
+	.main {
 		width: 640px;
+	}
+	.copyright {
+		width: 635px;
 	}
 	.aside, .authentication, .search-fieldset {
 		width: 320px;
@@ -133,8 +179,11 @@ a:hover {
 	body, .header, .navigation, .search, .footer {
 		width: 1280px;
 	}
-	.main, .copyright {
+	.main {
 		width: 960px;
+	}
+	.copyright {
+		width: 955px;
 	}
 	.aside, .authentication, .search-fieldset {
 		width: 320px;
@@ -144,15 +193,13 @@ a:hover {
 	body, .header, .navigation, .search, .footer {
 		width: 1600px;
 	}
-	.main, .copyright {
+	.main {
 		width: 960px;
+	}
+	.copyright {
+		width: 955px;
 	}
 	.aside, .authentication, .search-fieldset {
 		width: 640px;
-	}
-	.widget {
-		display: inline-block;
-		width: 320px;
-		vertical-align: top;
 	}	
 }

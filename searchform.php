@@ -8,7 +8,7 @@
 	<fieldset class="search-fieldset">
 		<legend class="accessible">Quick serach form</legend>
 		<label for="search-input" class="search-label">Search:</label>
-		<input type="text" name="s" id="search-input" class="search-input" value="<?php the_search_query(); ?>" />
-		<input type="submit" id="search-submit" class="button" role="button" />
+		<input type="search" name="s" id="search-input" class="search-input" value="<?php the_search_query(); ?>" />
+		<input type="submit" id="search-submit" class="button" role="button" value="Search" />
 	</fieldset>
 </form>
