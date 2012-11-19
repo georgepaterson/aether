@@ -51,7 +51,7 @@
 			<label for="comment">Comment <span class="required">(required)</span></label>
 			<textarea name="comment" id="comment" required="required"></textarea>
 			<p class="comment-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr>tags and attributes: <code><?php echo allowed_tags(); ?></code></p>
-			<input type="submit" name="submit" id="send" value="Post comment" />
+			<input type="submit" name="submit" id="send" class="button" value="Post comment" />
 			<?php comment_id_fields(); ?>
 			<?php do_action('comment_form', $post->ID); ?>
 		</fieldset>
