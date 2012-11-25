@@ -96,6 +96,10 @@ input::-moz-focus-inner {
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
+.comment-form label,
+.comment-form input {
+	margin: 0 0 10px;
+}
 .comment-form input {
 	width: 200px;
 }
@@ -128,10 +132,6 @@ input::-moz-focus-inner {
 .menu-item {
 	display: inline-block;
 	padding: 0 20px 0 0;
-}
-.search {
-	display: block;
-	overflow: hidden;
 }
 .search-fieldset {
 	float: right;
