@@ -10,9 +10,7 @@
 		</aside>
 		<footer id="footer" class="footer" role="contentinfo">
 			<p class="copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-			<ul id="authentication" class="authentication">
-				<?php wp_register(); ?>
-				<li><?php wp_loginout(); ?></li>
+			<ul id="links" class="links">
 				<li><a href="#main">Back to main</a></li>
 			</ul>
 		</footer>
