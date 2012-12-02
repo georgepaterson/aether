@@ -15,7 +15,7 @@
 		<meta name="keywords" content="HTML, JavaScript, CSS, UI, jQuery, HTML5, CSS3, development, web standards, mobile, web apps." />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
+		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/apple-touch-icon.png" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
